@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>To Do List</h2>
+
+    <!-- FORM -->
+    <form id="todoForm">
+        <input type="text" id="taskInput" placeholder="Masukkan tugas..." required>
+        <input type="date" id="dateInput" required>
+        <button type="submit">Tambah</button>
+    </form>
+
+    <!-- FILTER -->
+    <div class="actions">
+        <select id="filter">
+            <option value="all">Semua</option>
+            <option value="completed">Selesai</option>
+            <option value="pending">Belum Selesai</option>
+        </select>
+
+        <button id="deleteAll">Delete All</button>
+    </div>
+
+    <!-- LIST -->
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Tanggal</th>
+                <th>Status</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="todoList" class="todo-list"></tbody>
+    </table>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
